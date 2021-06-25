@@ -32,7 +32,9 @@ class SplashPage extends StatelessWidget {
               height: 46,
               margin: EdgeInsets.only(top: 70, bottom: 19),
               child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.bloc<PagesBloc>().add(GotoLoginPage());
+                  },
                   child: Text(
                     'Get Started',
                     style: whiteTextFont,

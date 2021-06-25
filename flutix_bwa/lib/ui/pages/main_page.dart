@@ -18,7 +18,24 @@ class _MainPageState extends State<MainPage> {
           children: [
             BlocBuilder<UserBloc, UserState>(
                 builder: (_, userState) => (userState is UserLoaded)
-                    ? Text(userState.users.name)
+                    ? Text(
+                        userState.users.email,
+                        style: TextStyle(fontSize: 20),
+                      )
+                    : SizedBox()),
+            BlocBuilder<UserBloc, UserState>(
+                builder: (_, userState) => (userState is UserLoaded)
+                    ? Text(
+                        userState.users.name,
+                        style: TextStyle(fontSize: 20),
+                      )
+                    : SizedBox()),
+            BlocBuilder<UserBloc, UserState>(
+                builder: (_, userState) => (userState is UserLoaded)
+                    ? Text(
+                        userState.users.id,
+                        style: TextStyle(fontSize: 20),
+                      )
                     : SizedBox()),
             ElevatedButton(
                 onPressed: () {
