@@ -1,6 +1,6 @@
 # flutix_bwa
 
-A new Flutter project.
+A new Flutter project by me
 
 ## Getting Started
 
