@@ -33,7 +33,7 @@ class _MainPageState extends State<MainPage> {
             BlocBuilder<UserBloc, UserState>(
                 builder: (_, userState) => (userState is UserLoaded)
                     ? Text(
-                        userState.users.id,
+                        userState.users.balance.toString(),
                         style: TextStyle(fontSize: 20),
                       )
                     : SizedBox()),
